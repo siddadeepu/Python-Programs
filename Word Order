@@ -1,0 +1,13 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n=int(input())
+words_count={}
+order=[]
+for _ in range(n):
+    word=input().strip()
+    if word not in words_count:
+        words_count[word]=1
+        order.append(word)
+    else:
+        words_count[word]+=1
+print(len(order))
+print(*[words_count[w] for w in order])
